@@ -1,0 +1,63 @@
+[
+  { "id": 1, "cat": "elegante", "nombre": "Vestido escarlata", "marca": "now", "precio": 160, "tagTipo": "Segunda mano", "vendido": false,
+    "fotos": ["vestido_escarlata.jpg", "vestido_escarlata-2.jpg"], "material": "Algodón", "condicion": "Casi nueva, sin detalles",
+    "medidas": "(talla xd)", "colores": [{ "nombre": "rojo", "hex": "#5e0505" }], "tallas": ["XS"],
+    "desc": "vestido escarlata hermoso para salir de fiesta o a lagun evento." },
+
+  { "id": 2, "cat": "elegante", "nombre": "Vestido MM", "marca": "importada", "precio": 30, "tagTipo": "Nuevo importado", "vendido": false,
+    "fotos": ["vestido-MM.jpg", "vestido-MM-2.jpg"], "material": "Algodon", "condicion": "Nuevo con etiqueta",
+    "medidas": "Pecho 60 cm · Largo 98 cm (talla M)", "colores": [{ "nombre": "negro", "hex": "#000000" }], "tallas": ["M"],
+    "desc": "Vestido negro elegante para cualquier fiesta." },
+
+  { "id": 3, "cat": "urbana", "nombre": "Polo dragon", "marca": "importada", "precio": 20, "tagTipo": "Nuevo importado", "vendido": false,
+    "fotos": ["polo-dragon.jpg", "polo-dragon-2.jpg"], "material": "Algodón premium", "condicion": "Nueva",
+    "medidas": "Pecho 64 cm · Largo 74 cm (talla M)", "colores": [{ "nombre": "blanco", "hex": "#ffffff" }], "tallas": ["M"],
+    "desc": "Polo para un look urbano, con diseño moderno." },
+
+  { "id": 4, "cat": "urbana", "nombre": "Polo mariposa", "marca": "importada", "precio": 20, "tagTipo": "Nuevo importado", "vendido": false,
+    "fotos": ["polo-mariposa.jpg", "polo-mariposa-2.jpg"], "material": "Algodon", "condicion": "Nueva",
+    "medidas": "Pecho 56 cm · Largo 60 cm (talla M)", "colores": [{ "nombre": "celeste", "hex": "#7e8ddb" }], "tallas": ["M"],
+    "desc": "Polo para un look urbano, con diseño moderno." },
+
+  { "id": 5, "cat": "urbana", "nombre": "Falda esperanza", "marca": "importada", "precio": 40, "tagTipo": "Segunda mano", "vendido": false,
+    "fotos": ["falda-cuero.jpg", "falda-cuero-2.jpg"], "material": "cuerina", "condicion": "Casi nuevo, sin detalles",
+    "medidas": "Pecho 56 cm · Largo 60 cm (talla M)", "colores": [{ "nombre": "verde", "hex": "#011405" }], "tallas": ["M"],
+    "desc": "Falda de cuero para un look urbano, con diseño moderno." },
+
+  { "id": 6, "cat": "urbana", "nombre": "Falda espi", "marca": "importada", "precio": 30, "tagTipo": "Segunda mano", "vendido": false,
+    "fotos": ["falda-jean.jpg", "falda-jean-2.jpg"], "material": "jean", "condicion": "Casi nuevo, sin detalles",
+    "medidas": "Pecho 56 cm · Largo 60 cm (talla M)", "colores": [{ "nombre": "plomo", "hex": "#303030" }], "tallas": ["M"],
+    "desc": "Falda para un look urbano, con diseño moderno." },
+
+  { "id": 7, "cat": "urbana", "nombre": "Jean noventero", "marca": "importada", "precio": 45, "tagTipo": "Segunda mano", "vendido": false,
+    "fotos": ["pantalon-jean.jpg", "pantalon-jean-2.jpg"], "material": "jean", "condicion": "Casi nuevo, sin detalles",
+    "medidas": "Pecho 56 cm · Largo 60 cm (talla M)", "colores": [{ "nombre": "azul marino", "hex": "#1c2331" }], "tallas": ["M"],
+    "desc": "jean para un look urbano, con diseño vintage." },
+
+  { "id": 8, "cat": "urbana", "nombre": "Polo cruzado", "marca": "importada", "precio": 30, "tagTipo": "Segunda mano", "vendido": false,
+    "fotos": ["polo.cruzado.jpg"], "material": "jean", "condicion": "Casi nuevo, sin detalles",
+    "medidas": "Pecho 56 cm · Largo 60 cm (talla M)", "colores": [{ "nombre": "beige", "hex": "#e9f198" }], "tallas": ["M"],
+    "desc": "polo cruzado para un look urbano, con diseño lindo." },
+
+  { "id": 9, "sinFoto": true, "cat": "deportiva", "nombre": "Jogger Nike", "marca": "Nike", "precio": 85, "tagTipo": "Nuevo importado", "vendido": false,
+    "fotos": ["jogger-nike.jpg"], "material": "Poliéster", "condicion": "Nuevo",
+    "medidas": "Cintura 36 cm (elástico) · Largo 98 cm (talla M)", "colores": [{ "nombre": "Negro", "hex": "#111111" }], "tallas": ["S", "M", "L", "XL"],
+    "desc": "Jogger cómodo y resistente, ideal para entrenar o el día a día." },
+
+  { "id": 10, "sinFoto": true, "cat": "deportiva", "nombre": "Zapatilla Runner", "marca": "Adidas", "precio": 219, "tagTipo": "Nuevo importado", "vendido": true,
+    "fotos": ["zapatilla-runner.jpg"], "material": "Malla transpirable", "condicion": "Nueva en caja",
+    "medidas": "Largo de plantilla: 38 = 24 cm · 42 = 27 cm",
+    "colores": [{ "nombre": "Negro", "hex": "#111111" }, { "nombre": "Blanco", "hex": "#f2f2f2" }], "tallas": ["38", "39", "40", "41", "42"],
+    "desc": "Zapatilla ligera con buen agarre, perfecta para correr o entrenar." },
+
+  { "id": 11, "sinFoto": true, "cat": "accesorios", "nombre": "Gorra New York", "marca": "New Era", "precio": 55, "tagTipo": "Segunda mano", "vendido": false,
+    "fotos": ["gorra-new-york.jpg"], "material": "Algodón", "condicion": "Buen estado",
+    "medidas": "Talla única, ajustable", "colores": [{ "nombre": "Negro", "hex": "#111111" }], "tallas": ["Única"],
+    "desc": "Gorra clásica con visera curva, un básico que combina con todo." },
+
+  { "id": 12, "sinFoto": true, "cat": "accesorios", "nombre": "Lentes de Sol", "marca": "Ray-Ban", "precio": 79, "tagTipo": "Nuevo importado", "vendido": false,
+    "fotos": ["lentes-sol.jpg"], "material": "Acetato", "condicion": "Nuevos",
+    "medidas": "Ancho total 14 cm",
+    "colores": [{ "nombre": "Negro", "hex": "#111111" }, { "nombre": "Carey", "hex": "#a9772f" }], "tallas": ["Única"],
+    "desc": "Lentes de sol con protección UV400 y marco liviano." }
+]

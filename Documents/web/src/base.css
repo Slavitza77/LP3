@@ -1,0 +1,213 @@
+/* =========================================================
+   Base propia de Sasami (reemplaza a Bootstrap 5.3)
+   Solo incluye lo que usa la tienda, con las mismas medidas,
+   puntos de quiebre y comportamiento que Bootstrap.
+   ========================================================= */
+
+/* ---------- Reset básico (lo que hacía Bootstrap Reboot) ---------- */
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-size: 1rem; line-height: 1.5; }
+p { margin-top: 0; margin-bottom: 1rem; }
+ul, ol { margin-top: 0; margin-bottom: 1rem; padding-left: 2rem; }
+img, svg { vertical-align: middle; }
+label { display: inline-block; }
+button { border-radius: 0; margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; }
+button:not(:disabled), [type="button"]:not(:disabled) { cursor: pointer; }
+input, select, textarea { margin: 0; font-family: inherit; font-size: inherit; line-height: inherit; }
+[hidden] { display: none !important; }
+small, .small { font-size: .875em; }
+b, strong { font-weight: bolder; }
+
+h1, h2, h3, h4, h5, h6 { margin-top: 0; margin-bottom: .5rem; font-weight: 500; line-height: 1.2; }
+h1, .h1 { font-size: calc(1.375rem + 1.5vw); }
+h2, .h2 { font-size: calc(1.325rem + .9vw); }
+h3, .h3 { font-size: calc(1.3rem + .6vw); }
+h4, .h4 { font-size: calc(1.275rem + .3vw); }
+h5, .h5 { font-size: 1.25rem; }
+h6, .h6 { font-size: 1rem; }
+@media (min-width: 1200px) {
+  h1, .h1 { font-size: 2.5rem; }
+  h2, .h2 { font-size: 2rem; }
+  h3, .h3 { font-size: 1.75rem; }
+  h4, .h4 { font-size: 1.5rem; }
+}
+.fs-3 { font-size: calc(1.3rem + .6vw) !important; }
+@media (min-width: 1200px) { .fs-3 { font-size: 1.75rem !important; } }
+
+/* ---------- Contenedores ---------- */
+.container, .container-fluid {
+  --bs-gutter-x: 1.5rem;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px)  { .container { max-width: 540px; } }
+@media (min-width: 768px)  { .container { max-width: 720px; } }
+@media (min-width: 992px)  { .container { max-width: 960px; } }
+@media (min-width: 1200px) { .container { max-width: 1140px; } }
+@media (min-width: 1400px) { .container { max-width: 1320px; } }
+
+/* ---------- Cuadrícula ---------- */
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+.col { flex: 1 0 0%; }
+.col-6 { flex: 0 0 auto; width: 50%; }
+.col-12 { flex: 0 0 auto; width: 100%; }
+.row-cols-2 > * { flex: 0 0 auto; width: 50%; }
+
+.g-3 { --bs-gutter-x: 1rem; }
+.g-4 { --bs-gutter-x: 1.5rem; }
+
+/* Columnas por tamaño de pantalla (igual que Bootstrap: 576 / 768 / 992 / 1200 px) */
+@media (min-width: 768px) {
+  .col-md-4 { flex: 0 0 auto; width: 33.3333333333%; }
+  .col-md-6 { flex: 0 0 auto; width: 50%; }
+  .row-cols-md-3 > * { flex: 0 0 auto; width: 33.3333333333%; }
+  .row-cols-md-4 > * { flex: 0 0 auto; width: 25%; }
+}
+@media (min-width: 992px) {
+  .col-lg-3 { flex: 0 0 auto; width: 25%; }
+  .col-lg-4 { flex: 0 0 auto; width: 33.3333333333%; }
+  .col-lg-5 { flex: 0 0 auto; width: 41.6666666667%; }
+  .col-lg-7 { flex: 0 0 auto; width: 58.3333333333%; }
+  .row-cols-lg-4 > * { flex: 0 0 auto; width: 25%; }
+  .g-lg-4 { --bs-gutter-x: 1.5rem; }
+}
+
+/* ---------- Ratios (proporción de las fotos) ---------- */
+.ratio { position: relative; width: 100%; }
+.ratio::before { display: block; padding-top: var(--bs-aspect-ratio, 100%); content: ""; }
+.ratio > * { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.ratio-4x5 { --bs-aspect-ratio: 125%; }
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: .375rem;
+}
+.btn:disabled { opacity: .65; pointer-events: none; }
+.btn-lg { padding: .5rem 1rem; font-size: 1.25rem; border-radius: .5rem; }
+.btn-sm { padding: .25rem .5rem; font-size: .875rem; border-radius: .25rem; }
+.btn-dark { color: #fff; background-color: #212529; border-color: #212529; }
+.btn-dark:hover { color: #fff; background-color: #1c1f23; border-color: #1a1e21; }
+.btn-outline-light { color: #f8f9fa; border-color: #f8f9fa; background: transparent; }
+.btn-outline-light:hover { color: #000; background-color: #f8f9fa; border-color: #f8f9fa; }
+
+/* ---------- Navegación ---------- */
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 0;
+}
+.navbar-brand { padding: 0; margin-right: 1rem; white-space: nowrap; text-decoration: none; }
+.navbar-dark .navbar-brand { color: #fff; }
+.bg-dark { background-color: #212529 !important; }
+.sticky-top { position: sticky; top: 0; z-index: 1020; }
+
+/* Migas de pan */
+.breadcrumb { display: flex; flex-wrap: wrap; margin-bottom: 1rem; padding: 0; list-style: none; }
+.breadcrumb-item.active { color: #6c757d; }
+
+/* ---------- Preguntas frecuentes (acordeón sin JavaScript) ---------- */
+.accordion-item { border: 1px solid #dee2e6; border-radius: .375rem; overflow: hidden; }
+.accordion-item + .accordion-item { margin-top: .5rem; }
+.accordion-header { margin: 0; }
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+}
+.accordion-button::after {
+  content: "";
+  flex-shrink: 0;
+  width: .55rem;
+  height: .55rem;
+  margin-left: auto;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform .2s ease-in-out;
+}
+.accordion-button:not(.collapsed)::after { transform: rotate(-135deg); }
+.accordion-button:focus { outline: none; }
+.accordion-button:not(.collapsed) { box-shadow: none; }
+.accordion-collapse.collapse:not(.show) { display: none; }
+.accordion-body { padding: 1rem 1.25rem; }
+
+/* ---------- Texto y espaciado (utilidades) ---------- */
+.d-flex { display: flex !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.align-items-center { align-items: center !important; }
+.align-items-end { align-items: flex-end !important; }
+.justify-content-between { justify-content: space-between !important; }
+.position-relative { position: relative !important; }
+.text-center { text-align: center !important; }
+.text-muted { color: #6c757d !important; }
+.text-decoration-none { text-decoration: none !important; }
+.fw-semibold { font-weight: 600 !important; }
+.fw-bold { font-weight: 700 !important; }
+.rounded-pill { border-radius: 50rem !important; }
+.gap-2 { gap: .5rem !important; }
+.gap-3 { gap: 1rem !important; }
+
+.mt-0 { margin-top: 0 !important; }
+.mt-2 { margin-top: .5rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
+.mt-5 { margin-top: 3rem !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: .25rem !important; }
+.mb-2 { margin-bottom: .5rem !important; }
+.mb-3 { margin-bottom: 1rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.ms-2 { margin-left: .5rem !important; }
+.mx-2 { margin-left: .5rem !important; margin-right: .5rem !important; }
+
+.py-3 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
+.py-4 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+.pb-5 { padding-bottom: 3rem !important; }
+.px-3 { padding-left: 1rem !important; padding-right: 1rem !important; }
+@media (min-width: 992px) { .px-lg-4 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; } }
+
